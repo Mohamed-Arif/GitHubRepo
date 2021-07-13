@@ -89,7 +89,7 @@ public String getFullDetails()
 		}
 	}
 
-String fullDetails = String.format("%s is a Swimmer.\n Their age is %d and their number is %d.\n" + 
+String fullDetails = String.format("%s is a Swimmer.\nTheir age is %d and their number is %d.\n" + 
 									"They are in the %s Level and the scores obtained are: %s\n" + 
 									"Their Final score is: %,.1f", 
 									getSwimmerName().getFullName(), getSwimmerAge(),
@@ -98,10 +98,10 @@ String fullDetails = String.format("%s is a Swimmer.\n Their age is %d and their
 return fullDetails;
 }
 
-public String getShortDetails()
+/*public String getShortDetails()
 {
 	String 
-}
+}*/
 
 
 
