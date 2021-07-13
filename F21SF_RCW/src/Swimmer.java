@@ -7,7 +7,7 @@ public class Swimmer {
 private int 	SwimmerNumber;					// Swimmer identifier number of type integer
 private Name 	SwimmerName;					// Swimmer name of type Name (name class)
 private String 	SwimmerLevel;					// Swimmer level of type String (Bronze, Silver, Gold)
-private int 	SwimmerAge; 					// private String SwimmerNationality(maybe) EXTRA ATTRIBUTE
+private int 	SwimmerAge; 					// private String SwimmerNationality(might use as extra attribute)
 private int [] 	ScoreArray = new int [5];		// an array to store scores of 5 rounds
 private Double 	FinalScore;						// the final score that will be obtained
 
