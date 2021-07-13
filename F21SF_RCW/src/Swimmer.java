@@ -4,7 +4,7 @@ public class Swimmer {
 
 // Instance Variables are declared below
 
-private int 	SwimmerNumber;					// Swimmer identifier number of type int
+private int 	SwimmerNumber;					// Swimmer identifier number of type integer
 private Name 	SwimmerName;					// Swimmer name of type Name (name class)
 private String 	SwimmerLevel;					// Swimmer level of type String (Bronze, Silver, Gold)
 private int 	SwimmerAge; 					// private String SwimmerNationality(maybe) EXTRA ATTRIBUTE
