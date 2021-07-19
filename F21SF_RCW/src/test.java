@@ -3,7 +3,7 @@ public class test {
 
 	public static void main (String[]args) {
 	
-		int [] ScoreArray = {90, 95, 96, 97, 91};
+		int [] ScoreArray = {3, 4, 3, 5, 5};
 		String SwimmerLevel = "Gold";
 	
 		Swimmer phillips = new Swimmer(77, "Valterri Bottas", SwimmerLevel, 29 ,ScoreArray);
@@ -14,8 +14,8 @@ public class test {
 		System.out.println(phillips.getSwimmerAge());
 		System.out.println(phillips.getFullDetails());
 		System.out.println(phillips.getShortDetails());
-		System.out.println(phillips.getOverAllScoreArray());
-		System.out.println();
+		System.out.println(phillips.getOverAllScore());
+		//System.out.println();
 		
 	
 	

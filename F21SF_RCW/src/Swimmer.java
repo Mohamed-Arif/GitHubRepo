@@ -21,7 +21,7 @@ public Swimmer(int number, String name, String level, int age, int[] Scores)
 	SwimmerLevel 	= level;
 	SwimmerAge 		= age;
 	ScoreArray 		= Scores;
-	this.getOverAllScoreArray();
+	this.getOverAllScore();
 }
 
 // Getters and setters to set and return values
@@ -41,7 +41,7 @@ public void setSwimmerAge(int SwimmerAge) {this.SwimmerAge = SwimmerAge;}
 public int[] getScoreArray() {return ScoreArray;}
 public void setScoreArray(int[] ScoreArray) {this.ScoreArray = ScoreArray;}
 
-public Double getOverAllScoreArray() 
+public Double getOverAllScore() 
 {
 	int [] Scores = this.getScoreArray(); 		// the score array value is assigned to the variable
 	Arrays.sort(Scores);						// using the array method "sort", the scores are sorted in ascending order
@@ -65,7 +65,7 @@ else if(getSwimmerLevel().contentEquals("Gold"))
 return this.OverAllScore = average;
 }
 
-public void setOverAllScoreArray(Double OverAllScore)
+public void setOverAllScore(Double OverAllScore)
 {
 	this.OverAllScore = OverAllScore;
 }
@@ -75,7 +75,7 @@ public void setOverAllScoreArray(Double OverAllScore)
 
 public String getFullDetails()
 {
-	int Scores[] = getScoreArray();
+	/*int Scores[] = getScoreArray();
 	String ScoreString = "";
 	
 	for(int i =0; i<Scores.length; i++)
@@ -88,19 +88,21 @@ public String getFullDetails()
 		{
 			ScoreString = ScoreString + ScoreArray[i];
 		}
-	}
-String fullDetails = String.format("%s is a Swimmer.\nTheir age is %d and their number is %d.\n" + 
-									"They are in the %s Level and the scores obtained are: %s\n" + 
+	}*/
+String fullDetails = String.format("%s is a %s level Swimmer aged %d and their number is %d.\n" + 
+									"The scores obtained by %s are: %s\n" + 
 									"Their Final score is: %,.1f", 
-									getSwimmerName().getFullName(), getSwimmerAge(),
-									getSwimmerNumber(), getSwimmerLevel(), ScoreString, getOverAllScoreArray());
+									getSwimmerName().getFullName(), getSwimmerLevel(), getSwimmerAge(),
+									getSwimmerNumber(), getSwimmerName().getFirstName(),
+									Arrays.toString(ScoreArray).replace("[", "").replace("]", ""),
+									getOverAllScore());
 	return fullDetails;
 }
 
 public String getShortDetails()
 {
 	String shortDetails = String.format("CN %d (%s) has overall score of %,.1f",
-							this.getSwimmerNumber(), this.getSwimmerName().getInitials(), this.getOverAllScoreArray());
+							this.getSwimmerNumber(), this.getSwimmerName().getInitials(), this.getOverAllScore());
 	return shortDetails;
 }	
 }
