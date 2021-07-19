@@ -25,9 +25,7 @@ public void readFile() {
 					
 				} catch (FileNotFoundException e) {
 					e.printStackTrace();
-				} 
-				
-					    
+				}					    
 			}		 
 		
 	
