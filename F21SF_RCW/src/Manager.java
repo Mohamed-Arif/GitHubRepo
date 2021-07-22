@@ -43,6 +43,20 @@ public void writeFile() {
 		
 			    
 }
+
+public void findSwimmer(Scanner readInput)
+{
+	System.out.println("Enter Number: ");
+	try 
+	{
+		int swimmerID = Integer.parseInt(readInput.nextLine());
+		System.out.println(this.swimmerList.findSwimmer(swimmerID));
+	}
+	catch(NumberFormatException e)
+	{
+		System.out.println("Please check the number you've entered");
+	}
+}
 	
 	public static void main(String[] args)
 	{
