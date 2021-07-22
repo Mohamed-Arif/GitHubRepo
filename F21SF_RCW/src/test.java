@@ -3,7 +3,7 @@ public class test {
 
 	public static void main (String[]args) {
 	
-		int [] ScoreArray = {3, 4, 3, 5, 5};
+		int [] ScoreArray = {5, 3, 4, 3, 5};
 		String SwimmerLevel = "Gold";
 	
 		Swimmer phillips = new Swimmer(77, "Valterri Bottas", SwimmerLevel, 29 ,ScoreArray);
