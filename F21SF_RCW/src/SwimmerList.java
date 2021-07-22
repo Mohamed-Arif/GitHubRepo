@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SwimmerList {
 	
 private Swimmer[] SwimmerArray = new Swimmer[15];
-int size = 0;
+//int size = 0;
 
 public void readList(String[] lines)
 {
@@ -61,22 +61,6 @@ public String detailedReport()
 	return details;
 }
 
-public String findSwimmer(int SwimmerNumber)
-{
-	for(int i=0; i<this.SwimmerArray.length;i++)
-	{
-		
-		if(SwimmerArray[i]!=null)
-		{
-			if(SwimmerNumber==SwimmerArray[i].getSwimmerNumber())
-			{
-				return "The Competitor with this number has registered for the event.";
-			}	
-		}			
-	}
-	return "A Competitor with this number has not registered for the event. ";
-}
-
 public String topScorer()
 {
 	String report = "";
@@ -115,6 +99,20 @@ public String getReport()
 return "5";	
 }
 
-
+public String findSwimmer(int SwimmerNumber)
+{
+	for(int i=0; i<this.SwimmerArray.length;i++)
+	{
+		
+		if(SwimmerArray[i]!=null)
+		{
+			if(SwimmerNumber==SwimmerArray[i].getSwimmerNumber())
+			{
+				return "The Competitor with this number has registered for the event.";
+			}	
+		}			
+	}
+	return "A Competitor with this number has not registered for the event. ";
+}
 
 }

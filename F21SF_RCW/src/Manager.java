@@ -30,11 +30,11 @@ public void readFile() {
 		
 public void writeFile() {
 	
-	 FileWriter  writeFile;
+	 FileWriter writeFile;
 
 	try {
 		writeFile = new FileWriter("output.txt");
-		writeFile.write(SwimmerList.getReport());
+		writeFile.write(swimmerList.getReport());
 		writeFile.close();
 		
 	} catch (IOException e) {
