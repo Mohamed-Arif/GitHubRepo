@@ -3,7 +3,6 @@ import java.util.Arrays;
 public class Swimmer {
 
 // Instance Variables are declared below
-
 private int 	SwimmerNumber;					// Swimmer identifier number of type integer
 private Name 	SwimmerName;					// Swimmer name of type Name (name class)
 private String 	SwimmerLevel;					// Swimmer level of type String (Bronze, Silver, Gold)
@@ -11,9 +10,7 @@ private int 	SwimmerAge; 					// private String SwimmerNationality(might use as 
 private int [] 	ScoreArray;						// an array to store scores
 private Double 	OverAllScore;					// the final score that will be obtained
 
-
 // Constructor to create Swimmer objects
-
 public Swimmer(int number, String name, String level, int age, int[] Scores)
 {
 	this.SwimmerNumber 		= number;
@@ -24,11 +21,12 @@ public Swimmer(int number, String name, String level, int age, int[] Scores)
 	this.getOverAllScore();
 }
 
-public double getOverAllScore()
+// Method to calculate the overall score
+public double getOverAllScore()			// referred code from https://stackoverflow.com/questions/8029024/calculating-average-without-highest-and-lowest-values-in-an-array
 {
-	double oScore =  0;
+	double oScore =  0;	
 	
-	int Max = ScoreArray[0];
+	int Max = ScoreArray[0];						
 	int iMax = 0;
 	
 	int Min = ScoreArray[0];
@@ -49,7 +47,7 @@ public double getOverAllScore()
 	}	
 	for(int i = 0; i < ScoreArray.length; i++)
 	{
-		if(!(i==iMax || i==iMin))
+		if(!(i==iMax || i==iMin))				
 		{
 			oScore = oScore + ScoreArray[i];
 		}
