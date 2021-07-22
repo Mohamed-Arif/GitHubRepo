@@ -1,8 +1,8 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.Scanner;
+import java.io.IOException;
+import java.io.FileWriter;
 
 public class Manager {
 
@@ -11,15 +11,15 @@ public class Manager {
 public void readFile() {
 				
 	File inputFileObject = new File("input.txt"); 
-	Scanner scannerObject;
+	Scanner sc;
 				
 	try {
 		String[] lines = new String[20];
-		scannerObject = new Scanner(inputFileObject);
+		sc = new Scanner(inputFileObject);
 				
-		for(int i=0;scannerObject.hasNextLine();i++)
+		for(int i=0;sc.hasNextLine();i++)
 			{
-				lines[i]=scannerObject.nextLine();
+				lines[i]=sc.nextLine();
 			}
 					swimmerList.readList(lines);
 					
@@ -28,6 +28,21 @@ public void readFile() {
 				}					    
 			}		 
 		
+public void writeFile() {
+	
+	 FileWriter  writeFile;
+
+	try {
+		writeFile = new FileWriter("output.txt");
+		writeFile.write(SwimmerList.getReport());
+		writeFile.close();
+		
+	} catch (IOException e) {
+		e.printStackTrace();
+	} 
+		
+			    
+}
 	
 	public static void main(String[] args)
 	{
