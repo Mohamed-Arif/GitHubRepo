@@ -27,9 +27,9 @@ public double getOverAllScore()			// referred code from https://stackoverflow.co
 	double oScore =  0;	
 	
 	int Max = ScoreArray[0];						
-	int iMax = 0;
-	
 	int Min = ScoreArray[0];
+	
+	int iMax = 0;
 	int iMin = 0;
 	
 	for(int i = 0; i < ScoreArray.length; i++)
@@ -47,7 +47,7 @@ public double getOverAllScore()			// referred code from https://stackoverflow.co
 	}	
 	for(int i = 0; i < ScoreArray.length; i++)
 	{
-		if(!(i==iMax || i==iMin))				
+		if(!(i==iMin || i==iMax))				
 		{
 			oScore = oScore + ScoreArray[i];
 		}
@@ -77,7 +77,7 @@ String fullDetails = String.format("%s is a %s level Swimmer aged %d and their n
 
 public String getShortDetails()
 {
-	String shortDetails = String.format("CN %d (%s) has overall score of %,.1f",
+	String shortDetails = String.format("Competitor Number: %d (%s) has overall score of %,.1f",
 							this.getSwimmerNumber(), this.getSwimmerName().getInitials(), this.getOverAllScore());
 	return shortDetails;
 }	

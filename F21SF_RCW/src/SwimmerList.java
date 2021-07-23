@@ -1,11 +1,9 @@
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.util.Scanner;
+import java.util.ArrayList;
 
 public class SwimmerList {
-	
+
+private ArrayList<Swimmer> SwimmerList = new ArrayList<>();
 private Swimmer[] SwimmerArray = new Swimmer[15];
-//int size = 0;
 
 public void readList(String[] lines)
 {
@@ -24,22 +22,28 @@ public void readList(String[] lines)
 	}
 }
 
+public String getReport()
+{
+	String report = String.format("%s\n%s\n%s", detailedReport(), topScorer(), numSwimmers());
+	return report;	
+}
+
 public String detailedReport()
 {
 	String details = "";
-	details = String.format("%-40s%-20s%-20s%-20s%-20s%s\n", "Competitiors","Age","Level","Scores","Overall Score");
+	details = String.format("%-30s%-30s%-20s%-20s%s\n", "Competitiors","Age","Level","Scores","Overall Score");
 	
 	for(int i = 0; i<SwimmerArray.length;i++)
 	{
 		if(SwimmerArray[i] != null)
 		{
-			details = String.format("%-40s%-20s%-20s%-20s%-20s%s\n",SwimmerArray[i].getSwimmerNumber(),
+			details = String.format("%-30s%-30s%-20s%-20s%s\n",SwimmerArray[i].getSwimmerNumber(),
 						SwimmerArray[i].getSwimmerName(),SwimmerArray[i].getSwimmerAge(),SwimmerArray[i].getSwimmerLevel(),
 						SwimmerArray[i].getScoreArray(),SwimmerArray[i].getOverAllScore());
 		}
 	}
-
-	details = details + String.format("\n","");
+	details = details + String.format("\n");
+	
 	for(int i=0; i < this.SwimmerArray.length;i++)
 	{
 		if(SwimmerArray[i] != null)
@@ -57,7 +61,6 @@ public String detailedReport()
 					SwimmerArray[i].getShortDetails());
 		}
 	}
-	
 	return details;
 }
 
@@ -65,8 +68,7 @@ public String topScorer()
 {
 	String report = "";
 	Double topScore = 0.0;
-	int k = 0;
-	int count = 0;
+	int top = 0;
 	
 	for(int i =0; i < this.SwimmerArray.length; i++)
 	{
@@ -75,44 +77,28 @@ public String topScorer()
 			if(topScore < SwimmerArray[i].getOverAllScore())
 			{
 				topScore = SwimmerArray[i].getOverAllScore();
-				k = 0;
+				top = i;
 			}
 		}
 	}
-	
-	report = String.format("STATISTICAL\nThere are %d Compitiors\n",count);
-	
-	if(count != 0)
-	{
-		report = report + String.format("The top score is %.1f and it has been scored by %s.\n",
-										SwimmerArray[k].getOverAllScore(), SwimmerArray[k].getSwimmerName().getFullName());
-	}
-	
+	report = report + String.format("STATISTICAL\nThe top score is %.1f and it has been scored by %s.\n",
+										SwimmerArray[top].getOverAllScore(), SwimmerArray[top].getSwimmerName().getFullName());
 	return report;
 }
 
-public String getReport()
-{
-	@SuppressWarnings("unused")
-	String report = String.format("%s\n%s\n%s", detailedReport(), topScorer());
-	
-return "5";	
+public String numSwimmers(){
+    return "There are " + SwimmerArray.length + " Swimmers" + "\n";
 }
 
-public String findSwimmer(int SwimmerNumber)
+public String checkSwimmer(int SwimmerNumber)
 {
 	for(int i=0; i<this.SwimmerArray.length;i++)
 	{
-		
-		if(SwimmerArray[i]!=null)
+		if(SwimmerArray[i]!=null && SwimmerNumber==SwimmerArray[i].getSwimmerNumber())
 		{
-			if(SwimmerNumber==SwimmerArray[i].getSwimmerNumber())
-			{
-				return "The Competitor with this number has registered for the event.";
+				return SwimmerArray[i].getShortDetails();		// change i to SwimmerNumber if it doesn't work
 			}	
 		}			
-	}
-	return "A Competitor with this number has not registered for the event. ";
+	return null;
 }
-
 }
