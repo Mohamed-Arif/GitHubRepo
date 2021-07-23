@@ -63,24 +63,26 @@ public void checkSwimmer(Scanner readInput)
 	public static void main(String[] args)
 	{
 	Manager manager = new Manager();
-	Scanner readInput = new Scanner(System.in);
+	System.out.println("Enter your Choice:\n1. Read report\n2. Generate Report\n"
+						+ "3. Check Scottish Archer Id\n4. Exit\n");
+	Scanner sc = new Scanner(System.in);
 	
-	while(true) {
-		System.out.println("Enter your Choice:\n1. Read report\n2. Generate Report\n"
-				+ "3. Check Scottish Archer Id\n4. Exit\n");
-		String options = readInput.nextLine();
+		int n = 2;
 		
-		if(Integer.parseInt(options)==1) {
-			manager.readFile();
-		}else if(Integer.parseInt(options)==2) {
-			manager.writeFile();
-		}else if(Integer.parseInt(options)==3) {
-			manager.checkSwimmer(readInput);
-		}else {
-			readInput.close();
-			return; 
+		switch(n) {
+		
+		case 1:
+				manager.readFile();
+				break;
+		case 2:
+				manager.writeFile();
+				break;
+		case 3:
+				manager.checkSwimmer(sc);
+				break;
+		default:
+				sc.close();
 		}
 	}
-}
 }
 

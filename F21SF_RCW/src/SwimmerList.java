@@ -78,11 +78,12 @@ public String topScorer()
 			{
 				topScore = SwimmerArray[i].getOverAllScore();
 				top = i;
+				report = report + String.format("STATISTICAL\nThe top score is %.1f and it has been scored by %s.\n", 
+						SwimmerArray[top].getOverAllScore(), SwimmerArray[top].getSwimmerName().getFullName());
 			}
 		}
 	}
-	report = report + String.format("STATISTICAL\nThe top score is %.1f and it has been scored by %s.\n",
-										SwimmerArray[top].getOverAllScore(), SwimmerArray[top].getSwimmerName().getFullName());
+	
 	return report;
 }
 
