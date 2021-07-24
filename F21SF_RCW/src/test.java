@@ -6,7 +6,7 @@ public class test {
 		int [] ScoreArray = {5, 3, 4, 3, 5};
 		String SwimmerLevel = "Gold";
 	
-		Swimmer phillips = new Swimmer(77, "Valterri Bottas", SwimmerLevel, 29 ,ScoreArray);
+		Swimmer phillips = new Swimmer(77, new Name("Valterri Bottas"), SwimmerLevel, 29 ,ScoreArray);
 	
 		System.out.println(phillips.getSwimmerNumber());
 		System.out.println(phillips.getSwimmerName().getFullName());

@@ -11,10 +11,10 @@ private int [] 	ScoreArray;						// an array to store scores
 private Double 	OverAllScore;					// the final score that will be obtained
 
 // Constructor to create Swimmer objects
-public Swimmer(int number, String name, String level, int age, int[] Scores)
+public Swimmer(int number, Name name, String level, int age, int[] Scores)
 {
 	this.SwimmerNumber 		= number;
-	this.SwimmerName 		= new Name(name);
+	this.SwimmerName 		= name;
 	this.SwimmerLevel 		= level;
 	this.SwimmerAge 		= age;
 	this.ScoreArray 		= Scores;
