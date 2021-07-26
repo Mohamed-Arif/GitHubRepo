@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Swimmer {
 
 // Instance Variables are declared below
-private int 	SwimmerNumber;					// Swimmer identifier number of type integer
+private String 	SwimmerNumber;					// Swimmer identifier number of type integer
 private Name 	SwimmerName;					// Swimmer name of type Name (name class)
 private String 	SwimmerLevel;					// Swimmer level of type String (Bronze, Silver, Gold)
 private int 	SwimmerAge; 					// private String SwimmerNationality(might use as extra attribute)
@@ -11,7 +11,7 @@ private int [] 	ScoreArray;						// an array to store scores
 private Double 	OverAllScore;					// the final score that will be obtained
 
 // Constructor to create Swimmer objects
-public Swimmer(int number, Name name, String level, int age, int[] Scores)
+public Swimmer(String number, Name name, String level, int age, int[] Scores)
 {
 	this.SwimmerNumber 		= number;
 	this.SwimmerName 		= name;
@@ -84,8 +84,8 @@ public String getShortDetails()
 
 //Getters and setters to set and return values
 
-public int getSwimmerNumber() {return SwimmerNumber;}
-public void setSwimmerNumber(int SwimmerNumber) {this.SwimmerNumber = SwimmerNumber;}
+public String getSwimmerNumber() {return SwimmerNumber;}
+public void setSwimmerNumber(String SwimmerNumber) {this.SwimmerNumber = SwimmerNumber;}
 
 public Name getSwimmerName() {return SwimmerName;}
 public void setSwimmerName(String SwimmerName) {this.SwimmerName = new Name(SwimmerName);}
