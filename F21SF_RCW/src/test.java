@@ -6,21 +6,30 @@ public class test {
 		int [] ScoreArray = {5, 3, 4, 3, 5};
 		String SwimmerLevel = "Gold";
 	
-		Swimmer phillips = new Swimmer(77, new Name("Valterri Bottas"), SwimmerLevel, 29 ,ScoreArray);
+		Swimmer s1 = new Swimmer("77", new Name("Valterri Bottas"), SwimmerLevel, 29 ,ScoreArray);
 	
-		System.out.println(phillips.getSwimmerNumber());
-		System.out.println(phillips.getSwimmerName().getFullName());
-		System.out.println(phillips.getSwimmerLevel());
-		System.out.println(phillips.getSwimmerAge());
-		System.out.println(phillips.getFullDetails());
-		System.out.println(phillips.getShortDetails());
-		System.out.println(phillips.getOverAllScore());
-		//System.out.println();
+		System.out.println(s1.getSwimmerNumber());
+		System.out.println(s1.getSwimmerName().getFullName());
+		System.out.println(s1.getSwimmerLevel());
+		System.out.println(s1.getSwimmerAge());
+		System.out.println(s1.getFullDetails());
+		System.out.println(s1.getShortDetails());
+		System.out.println(s1.getOverAllScore());
+		System.out.println("\n");
 		
 	
+		
+		int [] ScoreArray2 = {5, 5, 4, 5, 5};
+		
+		Swimmer s2 = new Swimmer("44", new Name("Lewis Hamilton"), SwimmerLevel, 33 ,ScoreArray2);
 	
-	
-	
+		System.out.println(s2.getSwimmerNumber());
+		System.out.println(s2.getSwimmerName().getFullName());
+		System.out.println(s2.getSwimmerLevel());
+		System.out.println(s2.getSwimmerAge());
+		System.out.println(s2.getFullDetails());
+		System.out.println(s2.getShortDetails());
+		System.out.println(s2.getOverAllScore());
 	
 	
 	}

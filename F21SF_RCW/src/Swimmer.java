@@ -65,7 +65,7 @@ public void setOverAllScore(Double OverAllScore)
 
 public String getFullDetails()
 {
-String fullDetails = String.format("%s is a %s level Swimmer aged %d and their number is %d.\n" + 
+String fullDetails = String.format("%s is a %s level Swimmer aged %d and their number is %s.\n" + 
 									"The scores obtained by %s are: %s\n" + 
 									"Their Final score is: %,.1f", 
 									getSwimmerName().getFullName(), getSwimmerLevel(), getSwimmerAge(),
@@ -77,7 +77,7 @@ String fullDetails = String.format("%s is a %s level Swimmer aged %d and their n
 
 public String getShortDetails()
 {
-	String shortDetails = String.format("Competitor Number: %d (%s) has overall score of %,.1f",
+	String shortDetails = String.format("Competitor Number: %s (%s) has overall score of %,.1f",
 							this.getSwimmerNumber(), this.getSwimmerName().getInitials(), this.getOverAllScore());
 	return shortDetails;
 }	
