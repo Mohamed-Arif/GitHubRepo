@@ -3,10 +3,10 @@ public class test {
 
 	public static void main (String[]args) {
 	
-		int [] ScoreArray = {5, 3, 4, 3, 5};
+		Integer[] ScoreArray = {5, 3, 4, 3, 5};
 		String SwimmerLevel = "Gold";
 	
-		Swimmer s1 = new Swimmer("77", new Name("Valterri Bottas"), SwimmerLevel, 29 ,ScoreArray);
+		Swimmer s1 = new Swimmer("77", new Name("Valterri Bottas"), SwimmerLevel, "29" ,ScoreArray);
 	
 		System.out.println(s1.getSwimmerNumber());
 		System.out.println(s1.getSwimmerName().getFullName());
@@ -19,9 +19,9 @@ public class test {
 		
 	
 		
-		int [] ScoreArray2 = {5, 5, 4, 5, 5};
+		Integer[] ScoreArray2 = {5, 5, 4, 5, 5};
 		
-		Swimmer s2 = new Swimmer("44", new Name("Lewis Hamilton"), SwimmerLevel, 33 ,ScoreArray2);
+		Swimmer s2 = new Swimmer("44", new Name("Lewis Hamilton"), SwimmerLevel, "33" ,ScoreArray2);
 	
 		System.out.println(s2.getSwimmerNumber());
 		System.out.println(s2.getSwimmerName().getFullName());

@@ -6,12 +6,13 @@ public class Swimmer {
 private String 	SwimmerNumber;					// Swimmer identifier number of type integer
 private Name 	SwimmerName;					// Swimmer name of type Name (name class)
 private String 	SwimmerLevel;					// Swimmer level of type String (Bronze, Silver, Gold)
-private int 	SwimmerAge; 					// private String SwimmerNationality(might use as extra attribute)
-private int [] 	ScoreArray = new int[5];						// an array to store scores
+private String 	SwimmerAge; 					// private String SwimmerNationality(might use as extra attribute)
+private Integer [] ScoreArray;					// an array to store scores
+@SuppressWarnings("unused")
 private Double 	OverAllScore;					// the final score that will be obtained
 
 // Constructor to create Swimmer objects
-public Swimmer(String number, Name name, String level, int age, int[] Scores)
+public Swimmer(String number, Name name, String level, String age, Integer[] Scores)
 {
 	this.SwimmerNumber 		= number;
 	this.SwimmerName 		= name;
@@ -65,7 +66,7 @@ public void setOverAllScore(Double OverAllScore)
 
 public String getFullDetails()
 {
-String fullDetails = String.format("%s is a %s level Swimmer aged %d and their number is %s.\n" + 
+String fullDetails = String.format("%s is a %s level Swimmer aged %s and their number is %s.\n" + 
 									"The scores obtained by %s are: %s\n" + 
 									"Their Final score is: %,.1f", 
 									getSwimmerName().getFullName(), getSwimmerLevel(), getSwimmerAge(),
@@ -93,10 +94,10 @@ public void setSwimmerName(String SwimmerName) {this.SwimmerName = new Name(Swim
 public String getSwimmerLevel() {return SwimmerLevel;}
 public void setSwimmerLevel(String SwimmerLevel) {this.SwimmerLevel = SwimmerLevel;}
 
-public int getSwimmerAge() {return SwimmerAge;}
-public void setSwimmerAge(int SwimmerAge) {this.SwimmerAge = SwimmerAge;}
+public String getSwimmerAge() {return SwimmerAge;}
+public void setSwimmerAge(String SwimmerAge) {this.SwimmerAge = SwimmerAge;}
 
-public int[] getScoreArray() {return ScoreArray;}
-public void setScoreArray(int[] ScoreArray) {this.ScoreArray = ScoreArray;}
+public Integer[] getScoreArray() {return ScoreArray;}
+public void setScoreArray(Integer[] ScoreArray) {this.ScoreArray = ScoreArray;}
 
 }
