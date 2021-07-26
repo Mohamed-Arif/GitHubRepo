@@ -26,19 +26,19 @@ public class ReaderWriter
 			line = sc.nextLine();
 		try
 		{
-			String [] parts = line.split(".");
+			String [] parts = line.split(",");
 			
 			String	number	= parts[0].trim();
 			String	name	= parts[1];
 			String 	level	= parts[2].trim();
 			String 	age		= parts[3].trim();
-			Integer[] score = new Integer[5];
+			Integer[] score = new Integer[4];
 			
 			int k = 0;
 			
 			for(int i = 0; i < parts.length; i++)
 			{
-				score[k] = Integer.parseInt(parts[5].trim());
+				score[k] = Integer.parseInt(parts[4].trim());
 				k++;
 			}
 			

@@ -8,7 +8,6 @@ private Name 	SwimmerName;					// Swimmer name of type Name (name class)
 private String 	SwimmerLevel;					// Swimmer level of type String (Bronze, Silver, Gold)
 private String 	SwimmerAge; 					// private String SwimmerNationality(might use as extra attribute)
 private Integer [] ScoreArray;					// an array to store scores
-@SuppressWarnings("unused")
 private Double 	OverAllScore;					// the final score that will be obtained
 
 // Constructor to create Swimmer objects

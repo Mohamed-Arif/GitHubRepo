@@ -1,10 +1,4 @@
 import java.util.ArrayList;
-import java.util.Scanner;
-import java.io.*;
-import java.io.IOException;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-
 /**
  * This class "swimList" contains an ArrayList of Swimmer objects.
  * It contains methods that are used to generate the final report.
@@ -67,7 +61,7 @@ public String getReport()
 public String tableOfComp()
 {
 	String details = "";
-	details = String.format("Number\t\tName\t\t\tLevel\t\t\tAge\t\tScores\t\t\t\tOverall Score\n");
+	details = String.format("Number\t\tName\t\tLevel\t\tAge\t\tScores\t\t\tOverall Score\n");
 		
 	for(Swimmer s : swimList)
 	{
