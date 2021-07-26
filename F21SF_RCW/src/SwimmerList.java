@@ -18,7 +18,7 @@ public void readList(String[] lines)
 			nScores[j]= Integer.parseInt(sScores[j]);
 		}
 	
-	this.SwimmerArray[i] = new Swimmer(Integer.parseInt(word[0]), word[1], word[2], Integer.parseInt(word[3]), nScores);
+	this.SwimmerArray[i] = new Swimmer((word[0], word[1], word[2], Integer.parseInt(word[3]), nScores);
 	}
 }
 
