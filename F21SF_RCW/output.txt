@@ -1,0 +1,11 @@
+The report
+Number		Name		Level		Age		Scores			Overall Score
+
+
+STATISTICAL
+
+There are 0 Swimmers in this competition.
+
+
+
+Score: 	0	0	0	0	0

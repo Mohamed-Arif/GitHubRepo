@@ -4,8 +4,7 @@ public class Manager {
 
 	public static void main (String[]args)
 	{
-		SwimList swimmah = new SwimList();
-		//ReaderWriter rw = new ReaderWriter();
+		SwimList swimmah = new SwimList();		
 		swimmah.readFile("input.txt", swimmah);
 		
 		String report = swimmah.getReport();
