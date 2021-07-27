@@ -1,4 +1,9 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Scanner;
 /**
  * This class "swimList" contains an ArrayList of Swimmer objects.
  * It contains methods that are used to generate the final report.
@@ -9,7 +14,7 @@ public class SwimList {
 
 public ArrayList <Swimmer> swimList;
 /**
-* Creating an arraylist of swimmers
+* Creating an ArrayList of swimmers
 */
 public SwimList()
 {
@@ -50,7 +55,8 @@ public  String checkSwim(String SwimmerNumber)
  */
 public String getReport()
 	{
-		String report = String.format("%s\nSTATISTICAL\n%s\n%s\n%s", tableOfComp(), getsListSize(), topScorer(), scoreFrequency());
+		String report = String.format("%s\nSTATISTICAL\n%s\n%s\n%s", tableOfComp(),
+										getsListSize(), topScorer(), scoreFrequency());
 		return report;	
 	}
 
@@ -141,4 +147,85 @@ public String scoreFrequency()
 	}
 	return freqReport;
 }
+
+
+public void writeToFile(String filename, String report)
+{
+	FileWriter fw;
+	try
+	{
+		fw = new FileWriter(filename);
+		fw.write("The report\n");
+		fw.write(report);
+		fw.close();
+	}
+	catch(FileNotFoundException fnf)
+	{
+		System.out.println("A file with this name was not found.");
+		System.exit(0);
+	}
+	catch(IOException ioe)
+	{
+		ioe.printStackTrace();
+		System.exit(1);
+	}		
+}
+
+public void readFile(String filename, SwimList list)
+{
+	Scanner sc = null;
+	try
+	{
+		File f = new File(filename);
+		sc = new Scanner(f);
+	}
+	catch(FileNotFoundException e)
+	{
+	System.out.println(filename + " was not found ");
+	System.exit(0);
+	}
+	
+	String line;
+	while(sc.hasNextLine())
+	{
+		line = sc.nextLine();
+	if(!line.isBlank()) {
+	try
+	{
+		String [] parts = line.split(",");
+		
+		String	number	= parts[0].replace(" ", "");
+		String	name	= parts[1].trim();
+		String 	level	= parts[2].replace(" ","");
+		String 	age		= parts[3].replace(" ","");
+		Integer[] score = new Integer[5];
+		
+		int k = 0;
+		if(parts.length == 10) {
+		for(int i = 5; i < parts.length; i++)
+		{
+			score[k] = Integer.parseInt(parts[i].trim());
+			k++;
+		}
+		
+		Swimmer s = new Swimmer (number, new Name(name), level, age, score);
+		list.addSwimmer(s);
+		} else
+		{
+			System.out.println("Error in value entered. Please check again." + line);
+		}
+	}
+	catch(NumberFormatException nfe)
+	{
+		System.out.println("A number conversion error has occured." + nfe.getMessage());
+	}
+	catch (ArrayIndexOutOfBoundsException air)
+	{
+		System.out.println("The file you're trying to process seems to be missing values." + air.getMessage());
+	}
+	}
+}
+}		
+
+
 }

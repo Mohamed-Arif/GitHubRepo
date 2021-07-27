@@ -30,6 +30,22 @@ public class test {
 		System.out.println(s2.getFullDetails());
 		System.out.println(s2.getShortDetails());
 		System.out.println(s2.getOverAllScore());
+		System.out.println("\n");
+		
+		
+		
+		Integer[] ScoreArray3 = {4, 3, 3, 2, 1};
+		
+		Swimmer s3 = new Swimmer("59", new Name("Nikita Mazepin"), SwimmerLevel, "20" ,ScoreArray3);
+	
+		System.out.println(s3.getSwimmerNumber());
+		System.out.println(s3.getSwimmerName().getFullName());
+		System.out.println(s3.getSwimmerLevel());
+		System.out.println(s3.getSwimmerAge());
+		System.out.println(s3.getFullDetails());
+		System.out.println(s3.getShortDetails());
+		System.out.println(s3.getOverAllScore());
+		System.out.println("\n");
 	
 	
 	}

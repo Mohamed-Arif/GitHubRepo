@@ -1,0 +1,4 @@
+258, Lewis Hamilton, Gold, 33, 5,5,5,4,4
+264, Charles Leclerc, Gold, 33, 5,5,5,4,4
+293, Daniel Riccardo, Gold, 33, 5,5,5,4,4
+223, Sergio Perez, Gold, 33, 5,5,5,4,4

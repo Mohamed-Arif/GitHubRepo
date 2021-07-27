@@ -5,12 +5,12 @@ public class Manager {
 	public static void main (String[]args)
 	{
 		SwimList swimmah = new SwimList();
-		ReaderWriter rw = new ReaderWriter();
-		rw.readFile("input.txt", swimmah);
+		//ReaderWriter rw = new ReaderWriter();
+		swimmah.readFile("input.txt", swimmah);
 		
 		String report = swimmah.getReport();
 		
-		rw.writeFile("output.txt", report);
+		swimmah.writeToFile("output.txt", report);
 		
 		for( int num = 0; num < 3; num++)
 		{
@@ -28,5 +28,5 @@ public class Manager {
 			}
 		}
 	
-	}	
+	}
 }

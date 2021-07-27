@@ -8,7 +8,6 @@ private Name 	SwimmerName;					// Swimmer name of type Name (name class)
 private String 	SwimmerLevel;					// Swimmer level of type String (Bronze, Silver, Gold)
 private String 	SwimmerAge; 					// private String SwimmerNationality(might use as extra attribute)
 private Integer [] ScoreArray;					// an array to store scores
-private Double 	OverAllScore;					// the final score that will be obtained
 
 // Constructor to create Swimmer objects
 public Swimmer(String number, Name name, String level, String age, Integer[] Scores)
@@ -18,7 +17,6 @@ public Swimmer(String number, Name name, String level, String age, Integer[] Sco
 	this.SwimmerLevel 		= level;
 	this.SwimmerAge 		= age;
 	this.ScoreArray 		= Scores;
-	this.getOverAllScore();
 }
 
 // Method to calculate the overall score
@@ -55,14 +53,7 @@ public double getOverAllScore()			// referred code from https://stackoverflow.co
 	return oScore/(ScoreArray.length-2);
 }
 
-public void setOverAllScore(Double OverAllScore)
-{
-	this.OverAllScore = OverAllScore;
-}
-
-// comments placeholder
-// comments placeholder
-
+// By using the string format and the get methods, the full details are returned.
 public String getFullDetails()
 {
 String fullDetails = String.format("%s is a %s level Swimmer aged %s and their number is %s.\n" + 
@@ -75,6 +66,7 @@ String fullDetails = String.format("%s is a %s level Swimmer aged %s and their n
 	return fullDetails;
 }
 
+// This method works similarly as the method above. By using string formatting and get methods, the short details are returned.
 public String getShortDetails()
 {
 	String shortDetails = String.format("Competitor Number: %s (%s) has overall score of %,.1f",
@@ -83,7 +75,6 @@ public String getShortDetails()
 }	
 
 //Getters and setters to set and return values
-
 public String getSwimmerNumber() {return SwimmerNumber;}
 public void setSwimmerNumber(String SwimmerNumber) {this.SwimmerNumber = SwimmerNumber;}
 
