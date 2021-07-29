@@ -31,6 +31,8 @@ public abstract class Competitor {
 	public void setScoreArray(int[] ScoreArray) {this.ScoreArray = ScoreArray;}
 	
 	public abstract String getShortDetails();
-	public abstract String getOverallScore();
+	public abstract Double getOverallScore();
+
+
 	
 }

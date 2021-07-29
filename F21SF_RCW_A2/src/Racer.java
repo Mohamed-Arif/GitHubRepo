@@ -1,104 +1,63 @@
 import java.util.Arrays;
 
-public class Racer {
+public class Racer extends Competitor {
 
-	private String 	RacerNumber;					// Swimmer identifier number of type integer
-	private Name 	RacerName;						// Swimmer name of type Name (name class)
-	private String 	RacerLevel;						// Swimmer level of type String (Bronze, Silver, Gold)
-	private String 	RacerAge; 						// Extra attribute is the Swimmer's Age
-	private Integer [] ScoreArray;					// an array to store scores
 	private double overAllScore;
 
 
-	public Racer(String number, Name name, String level, String age, Integer[] Scores){
+	public Racer(String number, Name name, String level, String age, int[] Scores){
 		
-		this.RacerNumber	= number;
-		this.RacerName		= name;
-		this.RacerLevel		= level;
-		this.RacerAge 		= age;
-		this.ScoreArray		= Scores;
-		}	
+		super(number, name, level, age, Scores );
+		this.getOverallScore();
+	}	
 
-	// @Override
-	public Double getOverAllScore()
-		{
-		Integer[] lScoreArray= this.getScoreArray(); 
+	public int[] getScoreArray() {
+		return ScoreArray;
+	}
+
+	public void setScoreArray(int[] scoreArray) {
+		ScoreArray = scoreArray;
+	};
+
+	 @Override
+	public String getShortDetails()
+			{
+			String shortDetails = String.format("Competitor: %s (%s) has overall score %,.1f.",
+			this.getcompNumber(),
+			this.getcompName().getInitials(),
+			this.getOverallScore());
+			return shortDetails;
+			}
+
+	@Override
+	public Double getOverallScore() {
+int[] lScoreArray= this.getScoreArray(); 
 		
 		Arrays.sort(lScoreArray);                             
 		
 		double avg = 0 ;                                       
 
-		if(getRacerLevel().contentEquals("Bronze"))
+		if(getcompLevel().contentEquals("Bronze"))
 		{                  																				 
 			avg = lScoreArray[lScoreArray.length-1] + lScoreArray[lScoreArray.length-2] / 2.0;             
 		}
 		
-		else if(getRacerLevel().contentEquals("Silver"))
+		else if(getcompLevel().contentEquals("Silver"))
 		{
 			avg = lScoreArray[lScoreArray.length-1] + 
 					lScoreArray[lScoreArray.length-2] +
 						lScoreArray[lScoreArray.length-3]/ 3.0;
 		}
 		
-		else if(getRacerLevel().contentEquals("Gold"))
+		else if(getcompLevel().contentEquals("Gold"))
 		{
 			avg = lScoreArray[lScoreArray.length-1]+
 					lScoreArray[lScoreArray.length-2]+lScoreArray[lScoreArray.length-3] +
 						lScoreArray[lScoreArray.length-4]/ 4.0; 
 		}
 
-		return this.overAllScore = avg;          
+		return this.overAllScore = avg;   
 	}
-
-	public String getRacerNumber() {
-		return RacerNumber;
-	}
-
-	public void setRacerNumber(String racerNumber) {
-		RacerNumber = racerNumber;
-	}
-
-	public Name getRacerName() {
-		return RacerName;
-	}
-
-	public void setRacerName(Name racerName) {
-		RacerName = racerName;
-	}
-
-	public String getRacerLevel() {
-		return RacerLevel;
-	}
-
-	public void setRacerLevel(String racerLevel) {
-		RacerLevel = racerLevel;
-	}
-
-	public String getRacerAge() {
-		return RacerAge;
-	}
-
-	public void setRacerAge(String racerAge) {
-		RacerAge = racerAge;
-	}
-
-	public Integer[] getScoreArray() {
-		return ScoreArray;
-	}
-
-	public void setScoreArray(Integer[] scoreArray) {
-		ScoreArray = scoreArray;
-	};
-
-	// @Override
-	public String getShortDetails()
-			{
-			String shortDetails = String.format("Competitor: %s (%s) has overall score %,.1f.",
-			this.getRacerNumber(),
-			this.getRacerName().getInitials(),
-			this.getOverAllScore());
-			return shortDetails;
-			}
 
 
 
