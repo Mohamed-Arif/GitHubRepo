@@ -1,0 +1,43 @@
+COMPETITION REPORT
+					%s
+
+Full details for 101: 
+Lewis Hamilton is a Gold level Swimmer aged 35 and their number is 101.
+The scores obtained by Lewis are: 4, 4, 4, 5, 5
+Their Final score is: 4.3
+
+Full details for 102: 
+Valterri Bottas is a Gold level Swimmer aged 32 and their number is 102.
+The scores obtained by Valterri are: 3, 4, 4, 4, 5
+Their Final score is: 4.0
+
+Full details for 109: 
+Sebastien Vettel is a Gold level Swimmer aged 34 and their number is 109.
+The scores obtained by Sebastien are: 3, 3, 4, 4, 5
+Their Final score is: 3.7
+
+Full details for 105: 
+George Russel is a Silver level Swimmer aged 22 and their number is 105.
+The scores obtained by George are: 1, 2, 2, 3, 4
+Their Final score is: 2.3
+
+Short details for 101: 
+Competitor Number: 101 (LH) has overall score of 4.3
+
+Short details for 102: 
+Competitor Number: 102 (VB) has overall score of 4.0
+
+Short details for 109: 
+Competitor Number: 109 (SV) has overall score of 3.7
+
+Short details for 105: 
+Competitor Number: 105 (GR) has overall score of 2.3
+
+STATISTICAL
+
+There are 4 Swimmers in this competition.
+
+Lewis Hamilton has the highest overall score
+
+Score: 			1	2	3	4	5
+Frequency:		1	2	4	9	4

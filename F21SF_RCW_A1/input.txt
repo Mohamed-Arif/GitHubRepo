@@ -1,0 +1,5 @@
+Number,Name,Level,Age,Scores
+101,Lewis Hamilton,Gold,35,5,4,5,4,4
+102,Valterri Bottas,Gold,32,4,3,4,5,4
+109,Sebastien Vettel,Gold,34,3,4,4,5,3
+105,George Russel,Silver,22,2,1,3,4,2
